@@ -1,0 +1,165 @@
+* {
+   font-family: "Gill Sans", sans-serif;
+}
+
+#homepagediv {
+   height: 100vh;
+   width: 100%;
+   background: white(193, 8, 8);
+}
+
+.hero {
+   position: absolute;
+
+   margin-left: 60%;
+   margin-top: -2%;
+
+}
+
+.text {
+   position: absolute;
+
+   margin-top: 10%;
+   margin-left: 10%;
+}
+
+.heading1 {
+
+   font-size: 20px;
+
+   color: #fc1e64;
+
+}
+
+.heading2 h1 {
+
+   font-size: 55px;
+   margin: 5px 0;
+
+
+}
+
+.tagline {
+
+   font-family: serif;
+
+   font-size: 20px;
+
+   color: #fc1e64;
+   margin: -10px 0;
+
+
+}
+
+.resumebutton {
+   margin: 50px 0;
+
+}
+
+#download {
+   position: absolute;
+   padding: 10px;
+   height: 15px;
+   width: 20px;
+
+   margin-top: -9px;
+   margin-left: -3px;
+
+}
+
+.resumebutton a:hover img {
+   filter: brightness(0) invert(1); 
+   /* Change icon color to white on hover */
+}
+
+.resumebutton a  {
+
+   font-size: 16px;
+   font-weight: bold;
+   color: black;
+   background-color: #fff;
+   border: 2px solid #fc1e64;
+   padding: 10px 20px;
+   border-radius: 15px;
+   transition: background-color 0.5s, color 0.3s, border-color 0.3s;
+   text-decoration: none;
+   /* Remove default underline */
+   position: relative;
+   padding-right: 43px;
+}
+
+.resumebutton a:hover {
+   background-color: #fc1e64;
+   color: #fff;
+}
+
+
+
+/* Fade-in animation for text */
+.text .heading1 h4,
+.text .heading2 h1,
+.text .tagline h5,
+.resumebutton {
+   opacity: 0;
+   /* Initially hide elements */
+   animation: fadeInText 1s ease forwards;
+   /* Apply fade-in animation */
+}
+
+/* Keyframes for text fade-in animation */
+@keyframes fadeInText {
+   from {
+      opacity: 0;
+   }
+
+   to {
+      opacity: 1;
+   }
+}
+
+/* Flip animation for text */
+.text .heading1 h4,
+.text .heading2 h1,
+.text .tagline h5,
+.resumebutton {
+   animation: flipInX 1.5s ease forwards;
+   /* Apply flip animation */
+}
+
+/* Keyframes for flip-in-X animation */
+@keyframes flipInX {
+   from {
+      transform: perspective(300px) rotateX(90deg);
+      /* Rotate from back side */
+      opacity: 0;
+   }
+
+   to {
+      transform: perspective(600px) rotateX(0deg);
+      /* Rotate to front side */
+      opacity: 1;
+   }
+}
+
+
+/* Slide-in animation for hero image */
+.hero img {
+   opacity: 0;
+   /* Initially hide hero image */
+   animation: slideInHero 2s ease forwards;
+   /* Apply slide-in animation */
+}
+
+/* Keyframes for slide-in animation for hero image */
+/* Slide-in animation for hero image falling from the top */
+@keyframes slideInHero {
+   from {
+      transform: translateY(-100%);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateY(0%);
+      opacity: 1;
+   }
+}
